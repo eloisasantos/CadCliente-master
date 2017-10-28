@@ -40,8 +40,7 @@ public class DeletarActivity extends AppCompatActivity {
         Cliente cliente = Cliente.findById(Cliente.class, 1);
         Cliente.deleteAll();
 
-
-    }
+        }
     }
 
 

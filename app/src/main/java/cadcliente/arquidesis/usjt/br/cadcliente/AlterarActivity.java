@@ -21,6 +21,8 @@ public class AlterarActivity extends AppCompatActivity {
     public EditText editTextTelefone;
     public EditText editTextId;
 
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
