@@ -1,6 +1,5 @@
 package cadcliente.arquidesis.usjt.br.cadcliente;
 
-import com.orm.SugarApp;
 import com.orm.SugarRecord;
 
 /**
@@ -10,7 +9,7 @@ import com.orm.SugarRecord;
 public class Cliente extends SugarRecord {
 
     String nome;
-    int idade;
+    String idade;
     String cpf;
     String telefone;
 
@@ -24,11 +23,11 @@ public class Cliente extends SugarRecord {
         this.nome = nome;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
@@ -46,5 +45,8 @@ public class Cliente extends SugarRecord {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public static void deleteAll() {
     }
 }

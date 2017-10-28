@@ -1,5 +1,7 @@
 package cadcliente.arquidesis.usjt.br.cadcliente;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +19,7 @@ public class AlterarActivity extends AppCompatActivity {
     public EditText editTextIdade;
     public EditText editTextCpf;
     public EditText editTextTelefone;
+    public EditText editTextId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +31,27 @@ public class AlterarActivity extends AppCompatActivity {
         editTextCpf = (EditText) findViewById(R.id.editTextCpf);
         editTextTelefone = (EditText) findViewById(R.id.editTextTelefone);
 
-
     }
 
 
     public void AlterarRegistro(View view) {
 
-        Cliente cliente = new Cliente();
-        cliente.setNome(editTextNome.getText().toString());
-        cliente.setIdade(Integer.parseInt(editTextIdade.getText().toString()));
-        cliente.setCpf(editTextCpf.getText().toString());
-        cliente.setTelefone(editTextNome.getText().toString());
+        Cliente cliente;
 
+        int id = Integer.parseInt(editTextId.getText().toString());
+
+        // select * from cliente where id = X
+
+        cliente = Cliente.findById(Cliente.class, 1);
+        cliente.nome = "Nome"; // modify the values
+        cliente.idade = "30";
+        cliente.cpf = "999999999";
+        cliente.telefone = "33333333";
         cliente.save();
-
-        Toast.makeText(this, "Registro salvo com sucesso ! Reg: " + cliente.getId(), Toast.LENGTH_LONG).show();
-
-        finish();
 
 
     }
 
 }
+
+

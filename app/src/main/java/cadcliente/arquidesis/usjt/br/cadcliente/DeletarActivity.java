@@ -1,5 +1,7 @@
 package cadcliente.arquidesis.usjt.br.cadcliente;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +18,7 @@ public class DeletarActivity extends AppCompatActivity {
     public EditText editTextIdade;
     public EditText editTextCpf;
     public EditText editTextTelefone;
+    public EditText editTextId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +36,12 @@ public class DeletarActivity extends AppCompatActivity {
 
     public void DeletarRegistro(View view) {
 
-       /**Cliente cliente = new Cliente();
-        cliente.setNome(editTextNome.getText().toString());
-        cliente.setIdade(Integer.parseInt(editTextIdade.getText().toString()));
-        cliente.setCpf(editTextCpf.getText().toString());
-        cliente.setTelefone(editTextNome.getText().toString());
 
-        cliente.save();
+        Cliente cliente = Cliente.findById(Cliente.class, 1);
+        Cliente.deleteAll();
 
-        Toast.makeText(this, "Registro salvo com sucesso ! Reg: " + cliente.getId(), Toast.LENGTH_LONG).show();
 
-        finish();
-
-*/
+    }
     }
 
-}
+

@@ -23,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void alterar(View view){
-
+        Intent intent = new Intent(this,AlterarActivity.class);
+        startActivity(intent);
     }
     public void deletar(View view){
-
+        Intent intent = new Intent(this,DeletarActivity.class);
+        startActivity(intent);
     }
 
 
