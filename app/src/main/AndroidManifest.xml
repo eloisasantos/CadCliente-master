@@ -37,6 +37,7 @@
         <activity android:name=".ConsultarActivity" />
         <activity android:name=".AlterarActivity" />
         <activity android:name=".DeletarActivity" />
+
     </application>
 
 </manifest>
